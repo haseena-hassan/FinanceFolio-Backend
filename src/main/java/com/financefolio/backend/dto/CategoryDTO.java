@@ -20,4 +20,7 @@ public class CategoryDTO {
 
     @NotBlank
     private String categoryType;
+
+    @NotBlank
+    private String userEmail;
 }
