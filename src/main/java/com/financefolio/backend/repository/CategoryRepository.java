@@ -8,5 +8,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
+
     ArrayList<Category> findByUserEmail(String email);
 }

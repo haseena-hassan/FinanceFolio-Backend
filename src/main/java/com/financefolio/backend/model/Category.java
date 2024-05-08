@@ -28,6 +28,5 @@ public class Category {
     public Category(CategoryDTO categoryDTO){
         categoryName = categoryDTO.getCategoryName();
         categoryType = categoryDTO.getCategoryType();
-        userEmail = categoryDTO.getUserEmail();
     }
 }

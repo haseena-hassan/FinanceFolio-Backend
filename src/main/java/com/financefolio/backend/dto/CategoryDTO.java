@@ -1,5 +1,6 @@
 package com.financefolio.backend.dto;
 
+import com.financefolio.backend.model.Category;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +22,9 @@ public class CategoryDTO {
     @NotBlank
     private String categoryType;
 
-    @NotBlank
-    private String userEmail;
+    public CategoryDTO(Category category) {
+        categoryId = category.getCategoryId();
+        categoryName = category.getCategoryName();
+        categoryType = category.getCategoryType();
+    }
 }
