@@ -19,7 +19,7 @@ public class Transfer {
     @Id
     @GeneratedValue
     @Column(nullable = false, unique = true)
-    private String transferId;
+    private Long transferId;
 
     @Column(nullable = false)
     private String sourceAccount;

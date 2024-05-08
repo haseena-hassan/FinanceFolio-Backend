@@ -1,5 +1,6 @@
 package com.financefolio.backend.dto;
 
+import com.financefolio.backend.model.Income;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,4 +30,13 @@ public class IncomeDTO {
     private String description;
 
     private String categoryName;
+
+    public IncomeDTO(Income income) {
+        incomeId = income.getIncomeId();
+        accountNumber = income.getAccountNumber();
+        incomeAmount = income.getIncomeAmount();
+        date = income.getDate();
+        description = income.getDescription();
+        categoryName = income.getCategoryName();
+    }
 }

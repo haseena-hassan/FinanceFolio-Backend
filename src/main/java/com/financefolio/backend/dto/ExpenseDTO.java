@@ -1,5 +1,6 @@
 package com.financefolio.backend.dto;
 
+import com.financefolio.backend.model.Expense;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,4 +30,13 @@ public class ExpenseDTO {
     private String description;
 
     private String categoryName;
+
+    public ExpenseDTO(Expense expense) {
+        expenseId = expense.getExpenseId();
+        accountNumber = expense.getAccountNumber();
+        expenseAmount = expense.getExpenseAmount();
+        date = expense.getDate();
+        description = expense.getDescription();
+        categoryName = expense.getCategoryName();
+    }
 }

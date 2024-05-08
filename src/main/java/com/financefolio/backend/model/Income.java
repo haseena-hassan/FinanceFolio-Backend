@@ -19,7 +19,7 @@ public class Income {
     @Id
     @GeneratedValue
     @Column(nullable = false, unique = true)
-    private String incomeId;
+    private Long incomeId;
 
     @Column(nullable = false)
     private String accountNumber;

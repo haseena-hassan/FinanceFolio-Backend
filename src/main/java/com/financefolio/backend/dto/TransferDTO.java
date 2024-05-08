@@ -1,5 +1,6 @@
 package com.financefolio.backend.dto;
 
+import com.financefolio.backend.model.Transfer;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,4 +31,13 @@ public class TransferDTO {
     private Date date;
 
     private String description;
+
+    public TransferDTO(Transfer transfer) {
+        transferId = transfer.getTransferId();
+        sourceAccount = transfer.getSourceAccount();
+        targetAccount = transfer.getTargetAccount();
+        transferAmount = transfer.getTransferAmount();
+        date = transfer.getDate();
+        description = transfer.getDescription();
+    }
 }
