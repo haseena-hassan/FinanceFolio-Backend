@@ -12,7 +12,7 @@ public interface AccountServiceInterface {
 
     void addAccount(AccountDTO accountDTO);
 
-    void updateAccount(String accountNumber, AccountDTO accountDTO);
+    void updateAccount(AccountDTO accountDTO);
 
     void deleteAccount(String accountNumber);
 }

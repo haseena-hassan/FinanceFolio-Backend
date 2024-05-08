@@ -1,5 +1,6 @@
 package com.financefolio.backend.dto;
 
+import com.financefolio.backend.model.Account;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,4 +24,11 @@ public class AccountDTO {
 
     @NotBlank
     private double balance;
+
+    public AccountDTO(Account account) {
+        accountNumber = account.getAccountNumber();
+        bankName = account.getBankName();
+        accountType = account.getAccountType();
+        balance = account.getBalance();
+    }
 }
